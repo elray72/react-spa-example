@@ -1,0 +1,84 @@
+@import "../../../themes/v1/scss/common";
+
+$hamburger-size: 60px;
+
+.hamburger {
+	display: block;
+	height: em($hamburger-size);
+	width: em($hamburger-size);
+	margin: em(($header-height-m - $hamburger-size)/2);
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	transition: transform 0.25s ease-in-out;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 3;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&__label {
+		display: none;
+	}
+
+	&__bar {
+		width: em(30);
+		height: em(4);
+		background-color: $black;
+		border-radius: em(2);
+		display: block;
+		margin: em(4) auto;
+		transition: all 0.25s ease-in-out;
+	}
+
+	&--expanded {
+		transform: rotate(-90deg);
+
+		.hamburger {
+
+			&__bar{
+
+				&:nth-child(1) {
+					transform: translateY(em(4)) translateX(em(4)) rotate(45deg) scaleX(0.5);
+				}
+
+				&:nth-child(2) {
+					transform: translateY(em(1)) rotate(90deg) scaleX(0.6);
+				}
+
+				&:nth-child(3) {
+					transform: translateX(em(-4)) translateY(em(-12)) rotate(-50deg) scaleX(0.5);
+				}
+			}
+		}
+	}
+
+	&--arrow {
+
+		.hamburger {
+
+			&__bar{
+
+				&:nth-child(1) {
+					transform: translateY(em(4)) translateX(em(4)) rotate(45deg) scaleX(0.5);
+				}
+
+				&:nth-child(2) {
+					transform: translateY(em(1)) rotate(90deg) scaleX(0.6);
+				}
+
+				&:nth-child(3) {
+					transform: translateX(em(-4)) translateY(em(-12)) rotate(-50deg) scaleX(0.5);
+				}
+			}
+		}
+	}
+
+	&--back {
+		transform: rotate(-90deg);
+	}
+}

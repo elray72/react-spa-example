@@ -4,8 +4,6 @@ import classNames from 'classnames';
 interface IProps {
 	children: ReactNode;
 	className?: string;
-	theme?: string;
-	type?: string;
 }
 
 const Page: React.FC<IProps> = (props) => {
