@@ -1,4 +1,4 @@
-import toDos from './todos';
+import toDos from './toDos';
 
 describe('toDos reducer', () => {
 	it('should handle initial state', () => {

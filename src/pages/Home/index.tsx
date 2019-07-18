@@ -11,7 +11,6 @@ interface IProps {
 const Home: React.FC<IProps> = () => {
 	return (
 		<Page className="home">
-			<ToDo />
 			<Wizard>
 				<Step step={1} prev={1} next={2}>
 					<h1>Step 1</h1>
